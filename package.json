@@ -1,5 +1,5 @@
 {
-  "name": "aoc-2025",
+  "name": "aoc-ts",
   "version": "1.0.0",
   "description": "",
   "private": "true",
@@ -21,11 +21,11 @@
   "license": "ISC",
   "packageManager": "pnpm@10.22.0",
   "devDependencies": {
-    "@types/node": "^24.10.1",
+    "@types/node": "^24.19.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "dotenv": "^17.2.3",
-    "z3-solver": "^4.15.4"
+    "dotenv": "^17.4.2",
+    "z3-solver": "^4.16.0"
   }
 }
