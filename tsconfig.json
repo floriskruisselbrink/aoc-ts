@@ -4,24 +4,23 @@
 
   "compilerOptions": {
     "lib": [
-      "es2024",
+      "es2025",
       "dom",
       "ESNext.Array",
       "ESNext.Collection",
       "ESNext.Iterator",
       "ESNext.Promise"
     ],
+    "rootDir": "./src",
     "types": ["node"],
     "module": "nodenext",
-    "target": "es2024",
+    "target": "es2025",
     "noEmit": true,
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
 
-    "strict": true,
-    "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16"
+    "moduleResolution": "nodenext"
   },
   "include": ["src"]
 }
