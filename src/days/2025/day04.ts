@@ -1,5 +1,5 @@
-import Matrix from "../utils/Matrix.ts";
-import Vector from "../utils/Vector.ts";
+import Matrix from "../../utils/Matrix.ts";
+import Vector from "../../utils/Vector.ts";
 
 const parseInput = (rawInput: string) =>
   rawInput

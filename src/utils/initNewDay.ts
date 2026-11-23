@@ -1,4 +1,6 @@
-import { copyFileSync, existsSync, writeFileSync } from "node:fs";
+import { existsSync, writeFileSync } from "node:fs";
+
+const year = "2025";
 
 const args = process.argv.slice(2);
 const day = args[0];
@@ -10,10 +12,10 @@ if (!day) {
 
 const dayPrefix = day.padStart(2, "0");
 
-console.log(`Creating template for day ${day}`);
+console.log(`Creating template for ${year} day ${day}`);
 
-const targetFile = `src/days/day${dayPrefix}.ts`;
-const targetTestFile = `src/days/day${dayPrefix}.test.ts`;
+const targetFile = `src/days/${year}/day${dayPrefix}.ts`;
+const targetTestFile = `src/days/${year}/day${dayPrefix}.test.ts`;
 
 if (existsSync(targetFile) || existsSync(targetTestFile)) {
   console.log(`day ${day} already exists`);
@@ -47,9 +49,9 @@ import { part1, part2 } from "./day${dayPrefix}.ts";
 
 const testInput = "TODO";
 
-const realInput = await readFile("src/days/day${dayPrefix}-input.txt");
+const realInput = await readFile("src/days/${year}/day${dayPrefix}-input.txt");
 
-describe("2025 Day ${dayPrefix}", () => {
+describe("${year} Day ${dayPrefix}", () => {
   it.skip("should have the correct answers", () => {
     assert.equal(part1(realInput), "");
     assert.equal(part2(realInput), "");

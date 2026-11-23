@@ -1,4 +1,4 @@
-import Vector from "../utils/Vector.ts";
+import Vector from "../../utils/Vector.ts";
 
 const parseInput = (rawInput: string) =>
   rawInput

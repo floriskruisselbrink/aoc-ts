@@ -1,4 +1,4 @@
-import memoize from "../utils/memoize.ts";
+import memoize from "../../utils/memoize.ts";
 
 const parseInput = (rawInput: string) => rawInput.trimEnd().split("\n");
 

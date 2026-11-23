@@ -1,6 +1,8 @@
 import type { Puzzle } from "./types.ts";
 import readFile from "./utils/readFile.ts";
 
+const year = "2025";
+
 const AOC_SESSION_KEY = process.env.AOC_SESSION_KEY;
 if (!AOC_SESSION_KEY) {
   console.error("AOC_SESSION_KEY not set in environment!");
@@ -8,7 +10,7 @@ if (!AOC_SESSION_KEY) {
 }
 
 const args = process.argv.slice(2);
-const dayToSolve = args[0].padStart(2, "0");
+const dayToSolve = args[0]?.padStart(2, "0");
 
 if (!dayToSolve) {
   console.error("No day specified, run with pnpm run dev {day}");
@@ -16,10 +18,10 @@ if (!dayToSolve) {
 }
 
 try {
-  const puzzlePath = `./days/day${dayToSolve}.ts`;
+  const puzzlePath = `./days/${year}/day${dayToSolve}.ts`;
   const { part1, part2 }: Puzzle = await import(puzzlePath);
 
-  const inputPath = `./src/days/day${dayToSolve}-input.txt`;
+  const inputPath = `./src/days/${year}/day${dayToSolve}-input.txt`;
   const input = await readFile(inputPath);
 
   console.log(`--- Day ${dayToSolve} ---`);

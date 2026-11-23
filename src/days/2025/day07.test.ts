@@ -1,6 +1,6 @@
 import assert from "node:assert";
 import { describe, it } from "node:test";
-import readFile from "../utils/readFile.ts";
+import readFile from "../../utils/readFile.ts";
 import { part1, part2 } from "./day07.ts";
 
 const testInput = `.......S.......
@@ -20,7 +20,7 @@ const testInput = `.......S.......
 .^.^.^.^.^...^.
 ...............`;
 
-const realInput = await readFile("src/days/day07-input.txt");
+const realInput = await readFile("src/days/2025/day07-input.txt");
 
 describe("2025 Day 07", () => {
   it("should have the correct answers", () => {
